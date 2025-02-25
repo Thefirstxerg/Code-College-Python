@@ -31,14 +31,20 @@ print(squares)
 
 players = ['charles', 'martina', 'michael', 'florence', 'eli']
 print("Here are the first three players on my team:")
-for player in players[:3]:
+for player in players[:3]: # First Three
     print(player.title())
 
 
 
 # Tuples 
-simple_tuple = (1, 2, 3, 4, 5) # Like constants, tuples are immutable
+simple_tuple = (1, 2, 3, 4, 5) # Like constants, tuples are immutable, and are defined by (), not []
 simple_list = ["value1", "value2", "value3"]
 print(simple_list)
 print(simple_tuple)
+
+simple_list.append("value4") 
+simple_list.insert(4, "value5")
+simple_list.pop() #simple_list[-1].remove
+print(simple_list)
+print(sorted(simple_list, reverse = True))
 
