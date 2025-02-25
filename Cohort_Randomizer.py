@@ -1,10 +1,8 @@
 # Description: Randomizes the cohort then pairs two of them together. 
-# Whoever is left is left alone
-Cohort = ["Aidan", "Asanda", "Cadee", "Courtney", "Ethan", "Lindo", "Phomello", "Ronny", "Sibu", "Tom", "Ulrich", "Mieke"]
-
+# Whoever is left is solo
 import random
 
-# Shuffle the cohort list
+Cohort = ["Aidan", "Asanda", "Cadee", "Courtney", "Ethan", "Lindo", "Phomello", "Ronny", "Sibu", "Tom", "Ulrich", "Mieke"]
 random.shuffle(Cohort)
 
 # Pair students together
