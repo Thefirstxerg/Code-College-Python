@@ -1,8 +1,8 @@
 # Loops
 movies = ["Arrival", "Blade Runner 2049", "The Matrix"]
 
-for movie in movies:
-    print(f"\nThis movie is \t{movie.title()}")
+for i in movies:
+    print(f"\nThis movie is \t{i.title()}")
 
 print("Because this is not indented, it is not part of the loop")
 
@@ -66,3 +66,7 @@ for food in buffet:
 buffet = ("Spaghetti", "Pizza", "Burger", "Salad", "Fries")
 for food in buffet:
     print(food)
+
+
+
+# https://python.org/dev/peps/pep-0008
