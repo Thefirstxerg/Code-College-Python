@@ -47,4 +47,3 @@ simple_list.insert(4, "value5")
 simple_list.pop() #simple_list[-1].remove
 print(simple_list)
 print(sorted(simple_list, reverse = True))
-
