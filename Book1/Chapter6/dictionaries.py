@@ -79,11 +79,17 @@ for key, value in alien_0.items():
 
 # Nesting
 # A list of dictionaries
-dad = {'name': 'Dad', 'age': 50}
-mom = {'name': 'Mom', 'age': 45}
-son = {'name': 'Son', 'age': 20}
-daughter = {'name': 'Daughter', 'age': 15}
+dad = {'name': 'Dad', 'age': 50, 'hometown': 'Pretor'}
+mom = {'name': 'Mom', 'age': 45, 'hometown': 'Johannesburg'}
+son = {'name': 'Son', 'age': 20, 'hometown': 'Pretoria'}
+daughter = {'name': 'Daughter', 'age': 15, 'hometown': 'Pretoria'}
 
 family = [dad, mom, son, daughter]
 for member in family:
-    print(member)
+    print(f"{member}")
+
+for i in range(len(family)):
+    for key, value in family[i].items():
+        print(f"\n{key}: {value}")
+        if key == 'name':
+            print(f"\n{value} is the {family[i]}.")
