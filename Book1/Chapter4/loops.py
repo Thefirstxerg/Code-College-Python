@@ -63,7 +63,7 @@ for food in buffet:
     print(food)
 
 # buffet[0] = "Spaghetti" # This will not work
-buffet = ("Spaghetti", "Pizza", "Burger", "Salad", "Fries")
+buffet = ("Spaghetti", "Milkshake", "Burger", "Salad", "Fries")
 for food in buffet:
     print(food)
 

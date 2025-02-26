@@ -2,7 +2,9 @@
 # Whoever is left is solo
 import random
 
-Cohort = ["Aidan", "Asanda", "Cadee", "Courtney", "Ethan", "Lindo", "Phomello", "Ronny", "Sibu", "Tom", "Ulrich", "Mieke"]
+
+# Names Excluded:"Asanda", "Phomello", "Cadee", "Lesedi"
+Cohort = ["Aidan", "Courtney", "Ethan", "Lindo", "Pierre", "Ronny", "Sibu", "Tom", "Ulrich", "Mieke", "Marvelous"]
 random.shuffle(Cohort)
 
 # Pair students together
