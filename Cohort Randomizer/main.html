@@ -10,46 +10,94 @@
             margin: 0;
             padding: 0;
             display: flex;
-            justify-content: center;
-            align-items: center;
             height: 100vh;
             background-color: #f0f0f0;
         }
-        .container {
-            background-color: #fff;
+        .sidebar {
+            width: 250px;
+            background-color: #007BFF;
+            color: #fff;
             padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            overflow-y: auto;
         }
-        .container h1 {
-            margin-bottom: 20px;
+        .sidebar h2 {
+            margin-top: 0;
         }
-        .container button {
+        .sidebar input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .sidebar button {
             padding: 10px 20px;
             font-size: 16px;
             cursor: pointer;
             border: none;
             border-radius: 4px;
-            background-color: #007BFF;
+            background-color: #0056b3;
+            color: #fff;
+            width: 100%;
+        }
+        .name-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .name-list .name-item {
+            padding: 10px;
+            background-color: #46a3ff;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            cursor: pointer;
+            user-select: none;
+        }
+        .name-list .name-item.selected {
+            background-color: #0056b3;
             color: #fff;
         }
-        .container button:hover {
-            background-color: #0056b3;
+        .container {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .container h1 {
+            margin-bottom: 20px;
         }
         .result {
             margin-top: 20px;
             font-size: 18px;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 4px;
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
         }
     </style>
 </head>
 <body>
+    <div class="sidebar">
+        <h2>Add Names</h2>
+        <input type="text" id="nameInput" placeholder="Enter name">
+        <button onclick="addName()">Add Name</button>
+        <div class="name-list" id="nameList"></div>
+    </div>
     <div class="container">
         <h1>Cohort Randomizer</h1>
         <button onclick="randomizeCohort()">Randomize</button>
         <div class="result" id="result"></div>
     </div>
 
-    <script src="cohortRandomizer.js"></script>
+    <script src="cohortRandomizer.js">
+    </script>
 </body>
-</html></div>
+</html>
