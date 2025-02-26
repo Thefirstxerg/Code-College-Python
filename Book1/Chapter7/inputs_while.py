@@ -47,3 +47,39 @@ while message != 'quit': # The loop runs as long as the value of message is not 
     if message != 'quit':
         print(message)
 
+
+# Using a flag
+active = True
+while active:
+    message = input(prompt) # Flags are used to keep track of certain conditions that need to be checked, 
+                            # in this example it is the condition of the while loop
+    if message == 'quit':
+        active = False
+    else:
+        print(message)
+
+# Using break to exit a loop
+while True:
+    message = input(prompt)
+    if message == 'quit':
+        break # Break statement immediately exits the loop
+    else:
+        print(message)
+
+# Using continue in a loop
+current_number = 0
+while current_number < 10:
+    current_number += 1
+    if current_number % 2 == 0:
+        continue # Continue statement tells Python to ignore the rest of the loop and return to the beginning
+    print(current_number)
+
+
+# Avoiding infinite loops
+x = 1
+while x <= 5:
+    print(x)
+    x += 1
+# This loop will run forever because the value of x will always be less than or equal to 5.
+
+
