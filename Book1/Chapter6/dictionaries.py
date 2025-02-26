@@ -87,9 +87,3 @@ daughter = {'name': 'Daughter', 'age': 15, 'hometown': 'Pretoria'}
 family = [dad, mom, son, daughter]
 for member in family:
     print(f"{member}")
-
-for i in range(len(family)):
-    for key, value in family[i].items():
-        print(f"\n{key}: {value}")
-        if key == 'name':
-            print(f"\n{value} is the {family[i]}.")
