@@ -141,8 +141,6 @@ pizza.make_pizza(12, 'mushrooms', 'green peppers', 'extra cheese')
 
 
 
-
-
 #Own example of function with inputs and return values
 def describe_city(city, country= "RSA"):
     print(f"{city} is in {country}")
