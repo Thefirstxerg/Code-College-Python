@@ -137,10 +137,6 @@ pizza.make_pizza(12, 'mushrooms', 'green peppers', 'extra cheese')
 
 
 
-
-
-
-
 #Own example of function with inputs and return values
 def describe_city(city, country= "RSA"):
     print(f"{city} is in {country}")
@@ -157,3 +153,20 @@ def describe_city(city, country= "RSA"):
 
 output = describe_city(input("Enter your city: "))
 print(output)
+
+
+
+
+# Try it yourself
+from car import Car # Importing a single class called Car from car.py
+from car import read_odometer as ro # Importing a single function called read_odometer from car.py and renaming it to ro using aliasing
+import car as c # You can also create an alias for the entire module
+# From is used to import a specific class or function from a module
+# Import is used to import the entire module
+
+
+my_new_car = Car('audi', 'a4', 2024)
+print(my_new_car.get_descriptive_name())
+
+my_new_car.odometer_reading = 23
+my_new_car.read_odometer()
