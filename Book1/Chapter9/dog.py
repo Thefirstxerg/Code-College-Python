@@ -26,7 +26,7 @@ print(f"My dog is {my_dog.age} years old.")
 
 # Calling methods
 my_dog.sit()
-my_dog.roll
+my_dog.roll_over()
 
 
 # Creating multiple instances
@@ -47,6 +47,3 @@ my_dog = Dog('willie', 6)
 my_dog.age = 7 # Modifying the age attribute
 print(f"My dog is now {my_dog.age} years old.")
 my_dog.sit()
-
-
-
