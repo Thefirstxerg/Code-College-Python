@@ -58,9 +58,9 @@ class ElectricCar(Car):
         Initialize attributes of the parent class.
         Then initialize attributes specific to an electric car.
         """
-        super().__init__(make, model, year)
+        super().__init__(make, model, year) # Super() function is a special function that helps Python make connections
+                                            # between the parent and child class
         self.battery = Battery()
-
 
 my_leaf = ElectricCar('nissan', 'leaf', 2024)
 print(my_leaf.get_descriptive_name())
