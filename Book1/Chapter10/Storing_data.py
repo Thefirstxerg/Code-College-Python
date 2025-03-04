@@ -9,5 +9,3 @@ with open(path, "w") as file: # w = write
 
 with open(path, "r") as file: # r = read
     numbers = json.load(file) # Load is used to read the data from the file
-
-
