@@ -16,12 +16,15 @@ class Settings:
         self.bullet_height = 15
         self.bullet_color = (60, 60, 60)
         self.bullets_allowed = 5
-
-        # Bomb settings
-        self.bomb_speed = 1.0
-        self.bomb_diameter = 15
-        self.bomb_color = (60, 60, 60)
-        self.bomb_explosion_radius = 50
+        
+        # Modify bomb settings for better visibility
+        self.bomb_width = 20      # Diameter of the bomb
+        self.bomb_height = 20     # Keep it same as width for circular shape
+        self.bomb_color = (255, 0, 0)  # Keep bright red
+        self.bomb_speed = 3.0     # Slower than bullets
+        self.bombs_allowed = 3   
+        self.bomb_recharge_time = 10000  # 3 seconds in milliseconds
+        self.bomb_explosion_radius = 200  # Radius of explosion effect
 
         # Alien settings
         self.fleet_drop_speed = 10
@@ -54,3 +57,24 @@ class Settings:
         self.bomb_speed *= self.speedup_scale
 
         self.alien_points = int(self.alien_points * self.score_scale)
+
+    def set_difficulty(self, difficulty):
+        """Adjust game settings based on difficulty level."""
+        if difficulty == 'Easy':
+            self.alien_speed = 1.0
+            self.bullets_allowed = 6
+            self.bomb_recharge_time = 5000  # 5 seconds
+            self.fleet_drop_speed = 5
+            self.alien_points = 25
+        elif difficulty == 'Medium':
+            self.alien_speed = 1.5
+            self.bullets_allowed = 4
+            self.bomb_recharge_time = 10000  # 10 seconds
+            self.fleet_drop_speed = 10
+            self.alien_points = 50
+        elif difficulty == 'Hard':
+            self.alien_speed = 2.0
+            self.bullets_allowed = 3
+            self.bomb_recharge_time = 15000  # 15 seconds
+            self.fleet_drop_speed = 15
+            self.alien_points = 100
