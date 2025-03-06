@@ -94,4 +94,3 @@ class Scoreboard:
         self.screen.blit(self.level_image, self.level_rect)
         self.ships.draw(self.screen)
         self.screen.blit(self.time_image, self.time_rect)
-
