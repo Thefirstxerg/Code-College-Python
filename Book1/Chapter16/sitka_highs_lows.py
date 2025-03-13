@@ -20,7 +20,6 @@ for row in reader:
     dates.append(current_date)
     highs.append(high)
     lows.append(low)
-print(highs)
 
 
 # Plot the high and low temperatures.
