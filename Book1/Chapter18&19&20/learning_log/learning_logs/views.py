@@ -10,11 +10,13 @@ def index(request):
 
 def topics(request):
     """Show all topics."""
-    topics = Topic.objects.filter(owner=request.user).order_by('date_added')
+    topics = Topic.objects.filter(owner=request.user).order_by('date_added') # Filter the topics to show only the ones owned by the current user.
     context = {'topics': topics}
     return render(request, 'learning_logs/topics.html', context)
 
-@login_required
+@login_required # This decorator checks if the user is logged in before running the view.
+# Decorators are functions that wrap around another function to add some extra functionality.
+# In this case, the login_required decorator checks if the user is logged in before running the view.
 def topic(request, topic_id):
     """Show a single topic and all its entries."""
     topic = Topic.objects.get(id=topic_id)

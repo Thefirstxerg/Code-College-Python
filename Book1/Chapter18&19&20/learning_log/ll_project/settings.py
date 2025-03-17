@@ -127,6 +127,6 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # My settings.
-LOGIN_REDIRECT_URL = 'learning_logs:index'
-LOGOUT_REDIRECT_URL = 'learning_logs:index'
-LOGIN_URL = 'accounts:login'
+LOGIN_REDIRECT_URL = 'learning_logs:index' # Redirect to home page after login.
+LOGOUT_REDIRECT_URL = 'learning_logs:index' # Redirect to home page after logout.
+LOGIN_URL = 'accounts:login' # Redirect to login page if not logged in.
